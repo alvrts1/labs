@@ -45,6 +45,25 @@ public class SubAccountServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        SubAccountDbDao subAccountDbDao1 = new SubAccountDbDao();
+
+        String name = request.getParameter("inputName");
+        int number = Integer.parseInt(request.getParameter("inputNumber"));
+
+        String accountPlan = request.getParameter("accountPlan");
+
+        int index1 = accountPlan.indexOf('=');
+        int index2 = accountPlan.indexOf(",");
+        String c1 = accountPlan.substring(index1+1, index2);
+        Long accountPlanId = Long.parseLong(c1.trim());
+
+        try {
+            SubAccount subAccount = new SubAccount(name, number, accountPlanDbDao.findById(accountPlanId), accountPlanId);
+            Long index = subAccountDbDao1.insert(subAccount);
+        } catch (SQLDataException e) {
+            throw new RuntimeException(e);
+        }
+
         doGet(request, response);
     }
 

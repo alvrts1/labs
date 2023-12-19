@@ -111,6 +111,13 @@
                         </div>
                     </div>
                     <div class="mb-3">
+                        <br> <label for="price"
+                                    class="col-sm-3 col-form-label">price</label>
+                        <div class="col-sm-6">
+                            <input type="number" step="any" name="inputPrice" class="form-control" id="price" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
                         <br> <label for="totalCost"
                                     class="col-sm-3 col-form-label">totalCost</label>
                         <div class="col-sm-6">

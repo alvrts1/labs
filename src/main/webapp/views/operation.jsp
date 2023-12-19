@@ -18,9 +18,9 @@
 </head>
 <body>
 <div class="container-fluid">
-    <jsp:include page="/views/header.jsp" />
-    <div class="container-fluid">
-        <div class="row justify-content-start ">
+    <jsp:include page="/views/header.jsp"/>
+    <div class="container-fluid"  >
+        <div class="row justify-content-start">
             <div class="col-8 border bg-light px-4">
                 <h3>Список operation</h3>
                 <table class="table">
@@ -61,73 +61,7 @@
                 </table>
             </div>
             <div class="col-4 border px-4">
-                <form method="POST" action="">
-                    <h3>Новый operation</h3>
-                    <div class="mb-1">
-                        <br> <label for="number"
-                                    class="col-sm-3 col-form-label">number</label>
-                        <div class="col-sm-6">
-                            <input type="number" name="inputNumber" class="form-control" id="number" />
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <br> <label for="date"
-                                    class="col-sm-3 col-form-label">date</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="inputDate" class="form-control" id="date" />
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <br> <label for="type"
-                                    class="col-sm-3 col-form-label">type</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="inputType" class="form-control" id="type" />
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <br> <label for="sum"
-                                    class="col-sm-3 col-form-label">sum</label>
-                        <div class="col-sm-6">
-                            <input type="number" step="any" name="inputSum" class="form-control" id="sum" />
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <br> <label for="saldoInput"
-                                    class="col-sm-3 col-form-label">saldoInput</label>
-                        <div class="col-sm-6">
-                            <input type="number" step="any" name="inputSaldoInput" class="form-control" id="saldoInput" />
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <br> <label for="saldoOutput"
-                                    class="col-sm-3 col-form-label">saldoOutput</label>
-                        <div class="col-sm-6">
-                            <input type="number" step="any" name="inputSaldoOutput" class="form-control" id="saldoOutput" />
-                        </div>
-                    </div>
-                    <div class="mb-1">
-                        <br> <label for="dealId"
-                                    class="col-sm-3 col-form-label">deal Id</label>
-                        <div class="col-sm-6">
-                            <select name="dealId" class="form-control" id="dealId">
-                                <option>Выберите deal Id</option>
-                                <jsp:useBean id="deals" scope="request" type="java.util.List"/>
-                                <c:forEach var="deal" items="${deals}">
-                                    <option value="${deal}">
-                                        <c:out value="${deal.getId()}"></c:out>
-                                    </option>
-                                </c:forEach>
-                            </select>
-                        </div>
-                    </div>
-
-
-                    <p>
-                        <br> <br> <br>
-                        <button type="submit" class="btn btn-primary">Добавить</button>
-                        <br>
-                    </p>
-                </form>
+                <jsp:include page="/views/form.jsp" />
             </div>
         </div>
     </div>

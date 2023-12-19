@@ -11,6 +11,7 @@ import org.example.demo.domain.AccountPlan;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLDataException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +39,18 @@ public class AccountPlanServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        AccountPlanDbDao accountPlanDbDao1 = new AccountPlanDbDao();
+        String name = request.getParameter("inputName");
+        String type = request.getParameter("inputType");
+        int number = Integer.parseInt(request.getParameter("inputNumber"));
+        AccountPlan accountPlan = new AccountPlan(name, type, number);
+
+        try {
+            Long index = accountPlanDbDao1.insert(accountPlan);
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+
         doGet(request, response);
     }
 
