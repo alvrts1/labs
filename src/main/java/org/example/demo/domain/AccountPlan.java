@@ -1,7 +1,5 @@
 package org.example.demo.domain;
 
-import org.example.demo.controller.AccountPlanServlet;
-
 public class AccountPlan {
     private Long id;
 
