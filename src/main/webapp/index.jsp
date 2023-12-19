@@ -13,10 +13,10 @@
     <div class="list-group text-center py-3 px-3">
       <h2>Функции системы</h2>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item list-group-item-primary"><a href="#">Operations</a></li>
-        <li class="list-group-item list-group-item-primary"><a href="#">Deals</a></li>
-        <li class="list-group-item list-group-item-primary"><a href="#">Sub account</a></li>
-        <li class="list-group-item list-group-item-primary"><a href="#">Account plan</a></li>
+        <li class="list-group-item list-group-item-primary"><a href="/demo_war_exploded/operation-servlet">Operations</a></li>
+        <li class="list-group-item list-group-item-primary"><a href="/demo_war_exploded/deal-servlet">Deals</a></li>
+        <li class="list-group-item list-group-item-primary"><a href="/demo_war_exploded/subAccount-servlet">Sub account</a></li>
+        <li class="list-group-item list-group-item-primary"><a href="/demo_war_exploded/accountPlan-servlet">Account plan</a></li>
       </ul>
     </div>
   </div>
